@@ -6,37 +6,42 @@ class Home extends BaseController
 {
     public function index()
     {
-        echo view('front/head_view');
+        $data['titulo']='Ruli3D';
+        echo view('front/head_view',$data);
         echo view('front/navbar');
         echo view('front/principal');
         echo view('front/footer');
     }
     public function quienes_somos()
     {
-        echo view('front/head_view');
+        $data['titulo']='¿Quienes Somos?';
+        echo view('front/head_view',$data);
         echo view('front/navbar');
         echo view('front/quienes_somos');
         echo view('front/footer');
     }
     public function acerca_de()
     {
-        echo view('front/head_view');
+        $data['titulo']='Acerca de';
+        echo view('front/head_view',$data);
         echo view('front/navbar');
         echo view('front/acerca_de');
         echo view('front/footer');
     }
     public function registro()
     {
-        echo view('front/head_view');
+        $data['titulo']='Registro';
+        echo view('front/head_view',$data);
         echo view('front/navbar');
-        echo view('back/registro');
+        echo view('back/usuario/registro');
         echo view('front/footer');
     }
     public function login()
     {
-        echo view('front/head_view');
+        $data['titulo']='Login';
+        echo view('front/head_view',$data);
         echo view('front/navbar');
-        echo view('back/login');
+        echo view('back/usuario/login');
         echo view('front/footer');
     }
 }

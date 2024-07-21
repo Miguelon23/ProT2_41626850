@@ -3,11 +3,15 @@
         <div class="card-header text-center">
             <h2>Iniciar Sesión</h2>
         </div>
+
+<!--Mensaje de Error-->
         <?php if (session()->getFlashdata('msg')): ?>
             <div class="alert alert-warning">
                 <?= session()->getFlashdata('msg') ?>
             </div>
-        <?php endif; ?>
+        <?php endif;?>
+
+        <!--Inicio del Login-->
         <form method="post" action="<?= base_url('/enviarlogin') ?>">
             <div class="card-body">
                 <div class="mb-2">
